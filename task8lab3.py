@@ -1,17 +1,14 @@
-salary = 5000  # зарплата
-spend = 6000  # траты
-months = 10  # количество месяцев
-increase = 0.03  # рост цен
+money_capital = 10000
+salary = 5000
+spend = 6000
+increase = 0.05
 
-need_money = 0  # количество денег, чтобы прожить 10 месяцев
+month = 0  # количество месяцев, которое можно прожить
 
 # TODO Оформить решение
-need_money += spend - salary
-while months-1 > 0:
-    need_money += spend*(1+increase) - salary
-    spend = spend*(1+increase)
-    months -= 1
 
-print(round(need_money))
+while money_capital > 0:
+    money_capital = money_capital + salary - spend**(1+increase)
+    month += 1
 
-
+print(month)
