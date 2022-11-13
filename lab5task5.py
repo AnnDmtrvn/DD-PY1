@@ -3,10 +3,10 @@ from random import sample
 
 
 def get_random_password(n=8) -> str:
-    upper = string.ascii_uppercase
-    lower = string.ascii_lowercase
-    digits = string.digits
-    rand_pass_list = sample((upper + lower + digits), n)
+    uppr = string.ascii_uppercase
+    lwr = string.ascii_lowercase
+    dgts = string.digits
+    rand_pass_list = sample((uppr + lwr + dgts), n)
     return ''.join([v for v in rand_pass_list])
 
 
