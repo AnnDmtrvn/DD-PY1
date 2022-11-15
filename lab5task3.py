@@ -1,17 +1,17 @@
 from random import randint
-
-
-def get_unique_list_numbers():
-    list_ = list()
+ 
+ 
+def get_unique_list_numbers(lst_length=15, start=-10, stop=10):
+    lst = list()
     n = 0
-    while n < 15:
-        num = randint(-10, 10)
-        if num not in list_:
-            list_.append(num)
+    while n < lst_length:
+        num = randint(start, stop)
+        if num not in lst:
+            lst.append(num)
             n += 1
-    return list_
-
-
+    return lst
+ 
+ 
 list_unique_numbers = get_unique_list_numbers()
 print(list_unique_numbers)
 print(len(list_unique_numbers) == len(set(list_unique_numbers)))
